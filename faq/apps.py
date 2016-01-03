@@ -21,6 +21,10 @@
 # THE SOFTWARE.
 
 from __future__ import absolute_import, division, print_function, unicode_literals
+from django.apps import AppConfig
+from django.utils.translation import ugettext_lazy as _
 
 
-default_app_config = "faq.apps.FaqConfig"
+class FaqConfig(AppConfig):
+    name = "faq"
+    verbose_name = _("Faq")

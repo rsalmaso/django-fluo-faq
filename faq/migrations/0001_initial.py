@@ -20,11 +20,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from __future__ import unicode_literals
-from django.db import models, migrations
-import fluo.db.models.fields
-import django.utils.timezone
+from __future__ import absolute_import, division, print_function, unicode_literals
 from django.conf import settings
+from django.db import models, migrations
+import django.utils.timezone
+import fluo.db.models.fields
 
 
 class Migration(migrations.Migration):

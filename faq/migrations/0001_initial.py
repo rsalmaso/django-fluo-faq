@@ -51,7 +51,7 @@ class Migration(migrations.Migration):
                 ('abstract', models.CharField(help_text='A brief description of the post', max_length=255, null=True, verbose_name='Abstract', blank=True)),
                 ('text', models.TextField(null=True, verbose_name='Default text', blank=True)),
                 ('note', models.TextField(verbose_name='Note', blank=True)),
-                ('owner', models.ForeignKey(related_name='faq_faq_owned', blank=True, to=settings.AUTH_USER_MODEL, help_text='Post owner.', null=True, verbose_name='owned by')),
+                ('owner', models.ForeignKey(related_name='faq_faq_owned', blank=True, to=settings.AUTH_USER_MODEL, help_text='Post owner.', on_delete=models.CASCADE, null=True, verbose_name='owned by')),
             ],
             options={
                 'verbose_name': 'faq',

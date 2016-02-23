@@ -41,7 +41,7 @@ admin.site.register(Topic, TopicAdmin)
 
 class FaqTranslationInlineModelForm(forms.ModelForm):
     pass
-class FaqTranslationInline(admin.TabularInline):
+class FaqTranslationInline(admin.StackedInline):
     model = FaqTranslation
     form = FaqTranslationInlineModelForm
     extra = MAX_LANGUAGES

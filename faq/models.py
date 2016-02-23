@@ -60,6 +60,7 @@ class Faq(PostModel):
 class FaqTranslation(PostModelTranslation):
     parent = models.ForeignKey(
         Faq,
+        on_delete=models.CASCADE,
         related_name='translations',
         verbose_name=_('faq'),
     )

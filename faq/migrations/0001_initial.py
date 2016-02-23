@@ -67,7 +67,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(unique=True, max_length=255, verbose_name='Slug field')),
                 ('abstract', models.CharField(help_text='A brief description', max_length=255, verbose_name='Abstract')),
                 ('text', models.TextField(verbose_name='Body')),
-                ('parent', models.ForeignKey(related_name='translations', verbose_name='faq', to='faq.Faq')),
+                ('parent', models.ForeignKey(related_name='translations', verbose_name='faq', on_delete=models.CASCADE, to='faq.Faq')),
             ],
             options={
                 'verbose_name': 'faq translation',
